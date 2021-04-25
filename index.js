@@ -1,5 +1,9 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+var mongoose = require('mongoose')
+
+
+
 var app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -7,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-app.post('/', (req,res)=>{
+app.get('/', (req,res)=>{
     
 
    res.send("hello")
@@ -28,7 +32,7 @@ app.post('/add', (req,res)=>{
 
 
 
-app.post('/home', (req,res)=>{
+app.post('/read', (req,res)=>{
     var getName= req.body.name
     var getRoll= req.body.rollno
 
