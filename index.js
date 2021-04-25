@@ -29,6 +29,6 @@ app.post('/home', (req,res)=>{
 
     
 })
-app.listen (5000, ()=>{
+app.listen (process.env.PORT || 5000, ()=>{
     console.log("server started at http://localhost5000")
 })
