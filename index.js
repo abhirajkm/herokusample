@@ -7,6 +7,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+app.post('/', (req,res)=>{
+    
+
+   res.send("hello")
+
+    
+})
 
 app.post('/add', (req,res)=>{
     var getNum1= parseInt(req.body.num1)
